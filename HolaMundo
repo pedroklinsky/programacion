@@ -1,0 +1,15 @@
+// holamundo.cpp : Defines the entry point for the console application.
+//Nombre: Pedro A. Klinsky Montero
+// Librerias
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main() // cuerpo principal. void indica que no devuelve el valor
+{
+	cout<<"Hola Mundo"<<endl;
+	cout<<"Me gusta el majadito \n"<<"y el churrasco";
+	getch();
+}
