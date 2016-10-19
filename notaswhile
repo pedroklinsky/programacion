@@ -1,0 +1,52 @@
+// notaswhile.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main()
+{ int registro, faltas, cont=0;
+  float parcial1, parcial2, practico, final, notafinal, promedio=0;
+  cout<<"Ingresar registro: ";
+  cin>>registro;
+  while  (registro !=-999)
+  {
+	  do
+	  {cout<<"Ingresar parcial 1: ";
+	  cin>>parcial1;}
+	  while((parcial1<0) || (parcial1>100));
+	  do
+	  {cout<<"Ingresar parcial 2: ";
+	  cin>>parcial2;}
+	  while((parcial2<0) || (parcial2>100));
+	  do
+	  {cout<<"Ingresar practico: ";
+	  cin>>practico;}
+	  while((practico<0) || (practico>100));
+	  do
+	  {cout<<"Ingresar faltas: ";
+	  cin>>faltas;}
+	  while((faltas<0) || (faltas>48));
+	  do
+	  {cout<<"Ingresar final: ";
+	  cin>>final;}
+	  while((final<0) || (final>100));
+
+	  if (faltas>10)
+		  final=0;
+	  notafinal=((parcial1+parcial2)/2)*0.4+practico*0.2+final*0.4;
+	  cout<<"registro"<<"   "<<registro<<endl<<"nota final"<<"   "<<notafinal<<endl;
+	  if (notafinal>=51)
+		  cout<<"aprobado"<<endl;
+	  else
+		  cout<<"reprobado"<<endl;
+	  cout<<"ingresar registro: ";
+	  cin>>registro;
+	  promedio=promedio+notafinal;
+	  cont++;
+  }
+  cout<<"el promedio es: "<<promedio/cont;
+  getch();
+}
