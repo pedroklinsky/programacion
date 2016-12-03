@@ -1,0 +1,99 @@
+// proyecto.cpp : Defines the entry point for the console application.
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float fmonto1 ( int dias, int costo1, int monto1);
+float fmonto2 ( int dias, int costo2, int monto2);
+float fmonto3 ( int dias, int costo3, int monto3);
+float fmonto4 ( int dias, int costo4, int monto4);
+void main()
+{ int telf, opcion, costo, dias, monto1, monto2, monto3, monto4, costo1, costo2, costo3, costo4, monto;
+    do{
+	cout<<"Ingrese su numero de celular: ";
+    cin>>telf;
+	}while((telf<60000000)||(telf>79999999));
+	do{
+    cout<<"__________MENU__________"<<endl;
+	cout<<"1.-Vagonetas            "<<endl;
+	cout<<"2.-Autos                "<<endl;
+	cout<<"0.-Salir                "<<endl;
+	cout<<"Elige una opcion        "<<endl;
+	cin>>opcion;
+	switch (opcion) {
+
+	    case 1:cout<<"vagoneta_1.-Nissan X-trail-40$"<<endl;
+			    cout<<"vagoneta_2.-Mitsubishi Outlander-30$"<<endl;
+				cout<<"0.-Salir                "<<endl;
+			    cin>>opcion; 
+				switch (opcion){
+				case 1:
+					   
+					    monto=fmonto1(dias,costo1,monto1);
+						break;
+				case 2:
+					    
+					    monto=fmonto2(dias,costo2,monto2);
+						break;
+				case 0: cout<<"salir";}
+				cout<<" el total a pagar es: "<<monto; break;
+		case 2:do{cout<<"auto_1.-Nissan Sentra-25$"<<endl;
+			    cout<<"auto_2.-Toyota Corolla-20$"<<endl;
+				cout<<"0.-Salir                "<<endl;
+			    cin>>opcion;
+				switch (opcion){
+				case 1:
+					   
+					    monto=fmonto3(dias,costo3,monto3);
+						break;
+				case 2:
+					    
+					    monto=fmonto4(dias,costo4,monto4);
+						break;
+				case 0: cout<<"salir";}
+				cout<<" el total a pagar es: "<<monto;}
+			   while (opcion!=0); break;
+	}
+	}while (opcion!=0);
+    getch();
+}
+	float fmonto1 ( int dias, int costo1, int monto1)
+ 
+{ costo1=40;
+	
+	cout<<"Ingresar la cantidad de dias de uso: ";
+	cin>>dias;
+	monto1=costo1*dias;
+	return monto1;
+}
+	float fmonto2 ( int dias, int costo2, int monto2)
+ 
+{ costo2=30;
+	
+	cout<<"Ingresar la cantidad de dias de uso: ";
+	cin>>dias;
+	monto2=costo2*dias;
+	return monto2;
+}
+float fmonto3 ( int dias, int costo3, int monto3)
+ 
+{ costo3=25;
+	
+	cout<<"Ingresar la cantidad de dias de uso: ";
+	cin>>dias;
+	monto3=costo3*dias;
+	return monto3;
+}
+float fmonto4 ( int dias, int costo4, int monto4)
+ 
+{ costo4=20;
+	
+	cout<<"Ingresar la cantidad de dias de uso: ";
+	cin>>dias;
+	monto4=costo4*dias;
+	return monto4;
+}
+
