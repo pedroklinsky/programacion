@@ -1,0 +1,33 @@
+/ repaso.h
+ 
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar_vector (float Vec[], int n);
+
+void main()
+{ int n;
+  float Vec[MAX];
+cout<<"Ingrese el tamanho del vector: ";
+cin>>n;
+cargar_vector(Vec, n);
+getch();
+}
+void cargar_vector (float Vec[], int n)
+{ float mayor;
+  int i;
+	for (i=0; i<n; i++)
+      { cout<<"Vec["<<i<<"]";
+        cin>>Vec[i];
+      }
+	for (i=0; i<n; i++)
+	{if(Vec[i]>mayor)
+	    mayor=Vec[i];
+	}
+	cout<<"El mayor es:"<<mayor;
+}
+
